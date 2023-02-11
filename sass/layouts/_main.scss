@@ -1,0 +1,77 @@
+@use "../utilities/variables";
+/*--------- Main -------*/
+
+.carousel-inner img {
+    height: 60vh;
+}
+
+#vehiculosdestacados {
+    margin: 50px 20px;
+    height: 100vh;
+    max-width: 95%;
+}
+
+.contenedor {
+    height: 100%;
+}
+
+.img-destacados {
+    height: 90%;
+}
+
+.altdest {
+    height: 50%;
+    margin: 10px 0px;
+
+    img {
+        height: 100%;
+    }
+}
+
+.col1 {
+    display: flex;
+    column-gap: variables.$espacioImagenes;
+
+    img {
+        width: 51.5%;
+    }
+}
+
+.col2 {
+    display: flex;
+    column-gap: variables.$espacioImagenes;
+
+    img {
+        width: calc(97% / 3);
+    }
+}
+
+.contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.carta-columna {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media screen and (min-width:768px) {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+}
+
+.card {
+    margin: 30px;
+
+    &-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.btnvendido {
+    background-color: red;
+}

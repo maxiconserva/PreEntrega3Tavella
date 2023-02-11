@@ -1,0 +1,58 @@
+@use "../utilities/mixins";
+
+/*----- Header ------*/
+header {
+    background: linear-gradient(-45deg, #f83600, #f9d423, #ff0808);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.login__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    h1 {
+        margin-left: 2%;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        text-decoration: none;
+        gap: 20px;
+        margin-right: 20px;
+        padding-top: 5px;
+    }
+
+}
+
+.nav-item {
+    &-1:hover {
+        background-color: #fee140;
+
+        @include mixins.hover-items
+    }
+
+    &-2:hover {
+        background-color: #43e97b;
+
+        @include mixins.hover-items
+    }
+}
